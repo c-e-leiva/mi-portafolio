@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 - IA | XCAIL</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Asegúrate de que el contenido no se superponga con la barra de navegación */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ajustar el margen superior para que el contenido no se superponga con la barra de navegación */
+        .work {
+            margin-top: 100px; /* Añadimos un margen para separar el título de la barra */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 2.5em;
+            color: #53666d;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .backbtn {
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #ff9900;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #cc7a00;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- navbar starts -->
+<header style="background-color: #2e2e2e; color: white; padding: 10px 0;">
+  <a href="#home" class="logo" style="color: white; text-decoration: none;">
+    <img src="../assets/images/11.png" alt="Icono" style="width: 50px; height: 50px;">
+  </a>
+
+  <div id="menu" class="fas fa-bars"></div>
+  <nav class="navbar">
+    <ul style="list-style: none; display: flex; justify-content: space-around; padding: 0;">
+      <li><a class="active" href="#home" style="color: white;">INICIO</a></li>
+      <li><a href="#about" style="color: white;">SOBRE MÍ</a></li>
+      <li><a href="#skills" style="color: white;">SKILLS</a></li>
+      <li><a href="#education" style="color: white;">EDUCACIÓN</a></li>
+      <li><a href="#work" style="color: white;">TRABAJOS</a></li>
+      <li><a href="#experience" style="color: white;">EXPERIENCIA</a></li>
+      <li><a href="#contact" style="color: white;">CONTACTO</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- work project section starts -->
+<section class="work" id="work">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  
+  <div class="box-container">
+    <div class="box tilt">
+      <img src="/assets/images/projects/agecalc.PNG" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Portfolio Website</h3>
+        </div>
+        <div class="desc">
+          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
+          <div class="btns">
+            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="backbtn">
+    <a href="/#work" class="btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+    </a>
+  </div>
+
+</section>
+<!-- work project section ends -->
+
+<!-- Footer -->
+<section class="footer">
+    <h1 class="credit">Carlos Ezequiel Leiva <i class="fa fa-heart pulse"></i> <a href="https://www.linkedin.com/in/c-e-leiva">@XCAIL</a></h1>
+</section>
+
+<!-- scroll top btn -->
+<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- ==== JavaScript CDN links ==== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
