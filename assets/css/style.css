@@ -541,7 +541,9 @@ header .navbar ul li a:hover {
 .education {
   background: #e5ecfb;
   min-height: 80vh;
+  padding: 20px;
 }
+
 .education .qoute {
   font-size: 1.5rem;
   text-align: center;
@@ -549,17 +551,20 @@ header .navbar ul li a:hover {
   font-weight: 600;
   margin-top: 0.5rem;
 }
+
 .education .box-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 20px; /* Espacio entre las cajas */
+  margin-top: 30px;
 }
+
 .education .box-container .box {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
+  max-width: 900px; /* Limita el tamaño máximo de las cajas */
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -569,28 +574,33 @@ header .navbar ul li a:hover {
   transition: 0.3s;
   background: rgb(252, 252, 252);
 }
+
 .education .box-container .box:hover {
   transform: scale(1.03);
   box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
 }
+
 .education .box-container .box .image {
-  flex: 1 1 20rem;
+  flex: 1 1 40%;
   width: 100%;
+  height: 200px; /* Ajusta la altura de la imagen */
 }
+
 .education .box-container .box img {
-  object-fit: cover;
-  position: relative;
+  object-fit: contain; /* Ajusta la imagen sin recortarla, pero puede dejar espacio vacío */
   width: 100%;
-  height: 100%;
+  height: 100%; /* Asegura que la imagen se ajuste sin recortarse */
 }
+
+
 .education .box-container .box .content {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  flex-wrap: wrap;
-  flex: 1 1 70rem;
+  flex: 1 1 60%;
 }
+
 .education .box-container .box .content h3 {
   font-size: 2.5rem;
   color: #012970;
@@ -599,11 +609,13 @@ header .navbar ul li a:hover {
   text-align: left;
   margin-left: 1rem;
 }
+
 .education .box-container .box .content p {
   font-size: 1.5rem;
   margin-left: 1rem;
   text-align: left;
 }
+
 .education h4 {
   font-size: 2rem;
   color: rgb(34, 109, 0);
@@ -613,27 +625,37 @@ header .navbar ul li a:hover {
   font-weight: 700;
 }
 
-/* education media queries starts*/
+/* education media queries starts */
 @media screen and (max-width: 600px) {
   .education .box-container .box {
     flex-direction: column;
     width: 100%;
+    margin-top: 1rem;
   }
+
   .education .box-container .box .image {
     width: 100%;
-    height: 25rem;
+    height: 20rem; /* Reducción de la altura de las imágenes */
   }
+
   .education .box-container .box img {
     width: 100%;
   }
+
   .education .box-container .box .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 auto;
     padding: 1rem;
-    flex-wrap: wrap;
-    flex: 0;
+    text-align: center;
   }
+
+  .education .box-container .box .content h3 {
+    font-size: 2rem; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+  }
+
+  .education .box-container .box .content p {
+    font-size: 1.2rem; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+  }
+
   .education .btns {
     margin-top: 2rem;
     margin-left: 1rem;
@@ -641,8 +663,117 @@ header .navbar ul li a:hover {
     flex-wrap: wrap;
   }
 }
-/* education media queries ends*/
+
+/* education media queries ends */
 /* education section ends */
+
+/* CERTIFICATES SECTION */
+.certificates {
+    padding: 10px 0; /* Espacio de relleno */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    text-align: center;
+}
+
+.certificates .heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333; /* Título en color oscuro */
+}
+
+.certificates .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 2200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado automático */
+}
+
+.certificates .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos de las tarjetas */
+.certificates .bar {
+    background-color: #f1f1f1; /* Fondo blanco para las tarjetas */
+    color: #333; /* Texto oscuro */
+    width: calc(30% - 20px); /* Ajustar el ancho a tres por fila con margen entre ellas */
+    height: 380px; /* Altura aumentada */
+    margin: 10px; /* Margen entre las tarjetas */
+    padding: 10px; /* Relleno interior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+.certificates .bar:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+}
+
+/* Estilos internos de cada tarjeta */
+.certificates .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* Estilos de la imagen */
+.certificates .bar .image-container {
+    width: 100%;
+    height: 260px; /* Altura de la imagen */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates .bar img {
+    max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-height: 100%; /* Ajusta el alto para que se vea bien */
+    object-fit: contain; /* Ajusta el contenido sin deformar la imagen */
+}
+
+/* Título debajo de la imagen */
+.certificates .bar span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Título en color oscuro */
+    margin-top: 10px;
+}
+
+/* Estilo para los enlaces */
+.certificates .bar a {
+    display: inline-block; /* Asegura que el enlace se comporte como un bloque en línea */
+    background-color: #8122d0; /* Fondo violeta*/
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Relleno para hacerlo más grande */
+    border-radius: 30px; /* Bordes redondeados, para hacerlo como un botón */
+    font-size: 16px; /* Tamaño de fuente adecuado */
+    margin-top: 10px; /* Espaciado entre el título y el enlace */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.certificates .bar a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Responsividad: Cambiar a una columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .certificates .bar {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+}
+
+
+
 
 /* work section starts */
 .work {
@@ -1232,57 +1363,4 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
-
-/* CERTIFICATES SECTION */
-.certificates {
-    padding: 5px;
-}
-
-.certificates .heading {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.certificates .container {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-}
-
-.certificates .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.certificates .bar {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    width: calc(33.333% - 20px); /* Ajustar el ancho según el número de tarjetas */
-    margin: 10px; /* Margen entre los cuadros */
-    padding: 10px;
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: center; /* Centrar contenido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.certificates .bar img {
-    width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
-    height: auto; /* Mantener la proporción de la imagen */
-    max-width: 400px; /* Ancho máximo de la imagen */
-    max-height: 400px; /* Alto máximo de la imagen */
-}
-
-.certificates .bar a {
-    display: block; /* Hacer el enlace un bloque para que esté debajo del título */
-    color: #fff; /* Color blanco para el enlace */
-    text-decoration: none; /* Sin subrayado */
-    margin-top: 5px; /* Espaciado entre el título y el enlace */
-}
-
-.certificates .bar a:hover {
-    text-decoration: underline; /* Subrayar al pasar el mouse */
-}
-
-
-
 
